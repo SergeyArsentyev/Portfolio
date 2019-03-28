@@ -8,13 +8,16 @@
 
     <body>
         <div class="header-container">
-            <header>
+            <header class="wrapper">
+                <div class="hat">            
+                    <!-- for easier centering of the page title -->
                 <h1 class="MainHeader">Sergey V. Arsentyev, MS</h1>
-                <center>Louisville, KY</center>
+                <p>Louisville, KY</p>
+                </div>
+
+                <!-- Here are the Menu or Navigation buttons -->
                 <nav>
-                <!-- <div id="header"> -->
-                <!-- <div class="flexx"> -->
-                    <ul>
+                    <ul class="flex">
                         <li><a href="Bio.html">Biography</a></li>
                         <li><a href="EEE.htm">Employment, Experience, Education</a></li>
                         <li><a href="Blog.html">Thoughts, Book Reviews, Miscellaneous</a></li>
@@ -25,31 +28,44 @@
         </div>
 
         <div class="main-container">
-            <article>
-                <header>
-                    <h3 class="title">Welcome to my Homepage!</h3>
-                </header>
-                <p class="intro">The purpose of this web-site is in part educational, as I am learning to code. It is also a resourse that I built and plan to maintain in order to establish my virtual, fifth-dimension presence, for professional purposes. Who knows, maybe it will grow into a corporate web-page, or another, more meaningful development. Feel free to browse through the materials presented here, or to contact me via the e-mail link above.</p>
-            </article>
-
-            <aside>
-                <div id="main" class="clear">
-                    <div class="right">
-                        <img src="images/Sergey.jpg" width="150" height="150" 
-                        alt="Sergey Arsentyev" class="main-photo">
-                    </div>
+            <div class="main wrapper">
+                <!-- the wrapper has two divisions, presented side-by-side: article, and an aside with my picture -->
+                <div>
+                    <article>
+                        <header>
+                            <h3 class="title">Welcome to my Homepage!</h3>
+                        </header>
+                        <p class="intro">The purpose of this web-site is in part educational, as I am learning to code. It is also a resourse that I built and plan to maintain in order to establish my virtual, fifth-dimension presence, for professional purposes. Who knows, maybe it will grow into a corporate web-page, or another, more meaningful development. Feel free to browse through the materials presented here, or to contact me via the e-mail link above.</p>
+                    </article>
                 </div>
-            </aside>
+
+                <div>
+                    <aside>
+                        <div id="main">
+                            <div class="right">
+                                <img src="images/Sergey.jpg" width="150" height="150"
+                                alt="Sergey Arsentyev" class="main-photo">
+                            </div>
+
+                            <!-- the button below is used for my JS and it hides the photo from the code directly above -->
+                            <button id=toggleList style="width:160px">Replace the photo with a fun fact</button>
+                        </div>
+                    </aside>
+                </div>
+            </div>
         </div>
         
         <div class="footer">
             <div class="footer-text">
-                <h3> Acknoledgements:</h3>
+                <h4> Acknoledgements:</h4>
                 <div class="acknoledgements">
-                    Friends and mentors at Minnesota State University, Mankato<br>                    Real ninjas worldwide, stay young at heart, and agile physically.<br>                    Artists, philosophers that inspire us to rise above the comfort of mediocrity.
+                    Friends and mentors at Minnesota State University, Mankato.<br>                    Real ninjas worldwide, stay young at heart, and physically agile.<br>                    Artists, philosophers that inspire us to rise above the comfort of mediocrity.
                 </div>
             </div>
-        </div><p>&copy; 2019 Sergey V. Arsentyev</p>
+        </div>
+        <!-- Finally, the copyright -->
+        <p id="boot">&copy; 2019 Sergey V. Arsentyev</p>
+        <script src="js/main.js"></script>
     </body>
 </html>
         

@@ -1,25 +1,46 @@
-html {height: 100%; padding: 0; margin: 0;}
-body{padding: 10px 0 0 10px;
-	width: 960px; 
-	position:relative;
+html {padding: 0; margin: 0;}
+body{padding: 0 0 0 5px;
+	width: 100%; 
 	margin: 0 auto;
+	/* the next 3 lines ensure the footer cleaves to the bottom of page */
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 130%;
-	background: -webkit-linear-gradient(top, rgb(216, 219, 239), #fff) no-repeat fixed;
+
+	/* Below I set the gradient background for each of the common browsers e.g. Firefox, IE, etc. */
+	background: -webkit-linear-gradient(top, rgb(169, 228, 240), #fff) no-repeat fixed;
 	background: -moz-linear-gradient(top, rgb(169, 228, 240), #fff) no-repeat fixed;
-	background: -o-linear-gradient(top, #D8EBEF, #fff) no-repeat fixed;
-	background: -ms-linear-gradient(top, #D8EBEF, #fff) no-repeat fixed;
+	background: -o-linear-gradient(top, rgb(169, 228, 240), #fff) no-repeat fixed;
+	background: -ms-linear-gradient(top, rgb(169, 228, 240), #fff) no-repeat fixed;
 }
+
+h1{color: #990000; font-weight: normal; font-size: 22px;}
+
+/* the round picture formatting plus the margins to float it level with the paragraph */
+.main-photo {position: center;
+	margin: 25px 0 0 25px;
+	border: solid 1px aqua;
+	border-radius: 50%;
+	}
+
+	/* my fancy firstletter T */
+.intro:first-letter {
+	float: left;
+	font-size: 30px;
+	font-family: georgia;
+	padding: 0px 5px;
+	margin: 5px 7px 0 0;}
 
 .header-container {border-bottom: 2 px solid white}
 
 .footer-container, .main aside {border-top: 2 px solid white}
 
 .header-container, .footer, .main-aside {background: rgb(173, 210, 224)}
+
+.flex {font-size: 0.9em;}
 
 nav ul {float: left;
 	margin: 0;
@@ -30,38 +51,30 @@ nav a{display: block;
 	color: #334F5A;
 	font-weight: bold;
 	text-decoration: none;
-	padding: 5px 10px;
+	/* the line above removes the undesireble bullet-points */
+	padding: 5px;
 	border: 1px solid #6596A5;
 	border-radius: 5px;
-	background: #fff;
-}
+	background: #fff;}
 
 a{color: #09147a;}
 a:hover{text-decoration: underline;}
 a:visited{color: #990000;}
 
+.main {padding: 30px 0;}
+
+.main aside {padding: 0px 5% 10px}
+
 .main-container{
+	flex: 1;
+	/* the line above aids in creating the sticky footer */
 	position:relative;
-	margin: 0 auto;
-}
+	margin: 0 auto;}
 
+.footer-text{padding: 2px;}
 
-
-
-#header .title{font-size: 26px; margin-bottom: 35px; color: #334F5A;}
-
-
-#header ul li{
-	display: block-inline;
-	list-style: none;
-	margin-right: 3px;
-}
-
-#header ul li:first-child{margin-right: 0px;}
-
-
-
-#header li a:hover{color: #fff; background: #6596A5;}
+.footer .acknoledgements{margin-left: 20px;
+	font-size: 0.85em;}
 
 
 
@@ -71,113 +84,75 @@ a:visited{color: #990000;}
 
 
 
+/* mobile-first approach to responsive design */
+@media  only screen and (min-width: 480px) {
+	body {width: 100%}
 
-
-
-
-
-
-
-.main-photo {position: center;
-	border: solid 1px aqua;
-	border-radius: 50%;
-}
-
-.MainHeader {text-align: center;
-	margin: 10px;
-};
-
-
-
-p{margin: 0 0 10px 0;}
-
-
-
-
-
-.menu{
-	float: left;
-	font-size: 12px;
-	font-weight: bold;
-}
-
-#main{margin: 20px 0;}
-
-#main ul{margin: 10px 0; padding: 0px;}
-#main ul li{list-style: none;}
-
-.highlight{
-	-moz-border-radius:5px;
-	border-radius: 5px;
-	background: #fff;
-	padding: 10px;
-	margin-bottom: 20px;
-}
-#footer{
-	margin: 0 auto;
-	width: 100%;
-	border-top: solid 2px #fff;
-	bottom: 0;
-	background: #6596A5;
-	color: #fff;
-	padding: 0 0 0 10px;
-}
-
-.footer-text{
-	width: 960px;
-	margin: 0 auto;
-	padding: 2px;
-}
-
-#footer h3{
-	color: #fff;
-	padding: 0;
-	margin: 0;
-}
-
-#footer .acknoledgements{margin-left: 30px;
-	font-size: 0.85em;
-}
-.intro:first-letter {
-	float: left;
-	font-size: 30px;
-	font-family: georgia;
-	padding: 0px 5px;
-	margin: 5px 7px 0 0;
-}
-
-#footer a{color: #fff;
-	font-size: 14}
-
-img{
-	border: solid 1px #D8EBEF;
-	background: white;
-}
-
-.left{float: left; margin: 0 10px 10px 0;}
-.right{float: right;margin: 0 0 10px 10px;}
-.clear{clear: both;}
-
-h1{color: #990000; font-weight: normal; font-size: 22px;}
-h2{color: #990000; font-size: 16px; margin-top: 0px;}
-
-#header {
-	display: flex;
-	flex-direction: column;
-	height: 100px;
-}
-
-@media  (min-width: 769px) {
-	#header, .flex, .menu, .title {display: flex}
-	.flex {
-		flex-wrap: wrap;
-		flex-direction: column;
-	}
-}
-
-@media (min-width: 1025) {
-	#container {
+	/* horizontal span of the menu buttons */
+	.main {
+		padding: 20px 0;
 		display: flex;
-		flex-grow: 1;
+		flex-direction: row;
+	}
+	/* buttons of the same width */
+	.flex {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	nav a {
+		float: left;
+		padding: 5px;
+		margin-bottom: 0;
+	}
+
+
+@media only screen and (min-width: 768px) {
+	body {width: auto;}
+	
+	.main {
+		display: flex;
+		flex-direction: row;
+	}
+/* ensuring the Header is centered */
+	.hat {text-align: center;
+		margin: 10px;
+	};
+
+	.title {
+		float: left;
+		font-size: 1.4em;
+	}
+
+	nav {float: left}
+
+	nav a {padding: 5px}
+
+	.flex {
+		display: flex;
+		align-items: center;
+	}
+
+	/* Separating the content into two columns for wider displays */
+	.main article {
+		float: left;
+	}
+	.main aside {
+		float: right;
 	}
 }
+
+@media only screen and (min-width: 960px) {
+	body {width: auto;}
+
+	.main {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.header-container, .wrapper, .footer, #boot {
+		width:960px;
+		margin: 0 auto;}
+	
+	#boot, .wrapper nav a {padding: 7px;}
+	}
